@@ -1,4 +1,3 @@
-// About.jsx
 import Slides from '../Components/Slides';
 
 function About() {

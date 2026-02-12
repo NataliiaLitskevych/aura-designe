@@ -1,4 +1,3 @@
-// Shop.jsx
 import { useState, useEffect } from "react"; 
 import Buttons from "../Components/Buttons";
 import Furniture from "../Components/Furniture";

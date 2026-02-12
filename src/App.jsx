@@ -27,7 +27,6 @@ function App() {
         <NavLink to="/" className={({ isActive }) => isActive ? 'link active' : 'link'}>Home</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? 'link active' : 'link'}>About</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? 'link active' : 'link'}>Contact us</NavLink>
-
         <NavLink to="/cart" className="nav-cart-link">
           <span className="cart-icon">🛒</span>
           {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}

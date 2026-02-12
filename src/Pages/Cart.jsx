@@ -30,8 +30,7 @@ function Cart() {
                             
                             <button 
                                 className="delete-btn" 
-                                onClick={() => dispatch(removeItemFromCart({ itemId: item.id }))}
-                            >
+                                onClick={() => dispatch(removeItemFromCart({ itemId: item.id }))}>
                                 Remove
                             </button>
                         </div>

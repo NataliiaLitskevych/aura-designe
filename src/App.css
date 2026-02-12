@@ -8,13 +8,12 @@ body, html {
   width: 100%;
 }
 
-/* --- Секція App.jsx (Navbar) --- */
 .navbar {
   display: flex;
   justify-content: space-between; 
   align-items: center;
   padding: 20px 50px;
-  background-color: #2d4a2d; /* Твій фірмовий темно-зелений */
+  background-color: #2d4a2d; 
   position: sticky; 
   top: 0;
   z-index: 1000;
@@ -40,7 +39,6 @@ nav a:hover, nav a.active {
 
 .link {
   text-decoration: none;
-  /* Робимо колір світло-сірим або молочним, щоб не різало око чистим білим */
   color: #e0e8e0; 
   margin: 0 15px;
   font-size: 14px;
@@ -62,7 +60,6 @@ nav a:hover, nav a.active {
   border-bottom: 2px solid #fff;
 }
 
-/* --- Секція Shop.jsx (Header & Layout) --- */
 .shop-wrapper {
   padding: 40px 20px;
   text-align: center;
@@ -91,7 +88,6 @@ nav a:hover, nav a.active {
   border-bottom: 1px solid #ddd;
 }
 
-/* Контейнер для всіх карток */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +98,6 @@ nav a:hover, nav a.active {
   margin: 0 auto; 
 }
 
-/* Сама картка товару */
 .product-card {
   width: 300px;
   background: #fff;
@@ -117,7 +112,6 @@ nav a:hover, nav a.active {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Налаштування зображення */
 .product-card img {
   width: 100%;
   height: 400px; 
@@ -125,7 +119,6 @@ nav a:hover, nav a.active {
   display: block;
 }
 
-/* Блок з текстом під фото */
 .product-info {
   padding: 20px;
   text-align: center;
@@ -145,7 +138,6 @@ nav a:hover, nav a.active {
   font-weight: 400;
 }
 
-/* Контейнер сторінки */
 .about-page {
   max-width: 900px;
   margin: 60px auto;
@@ -166,7 +158,6 @@ nav a:hover, nav a.active {
   margin-bottom: 40px;
 }
 
-/* Блок з додатковою інформацією внизу */
 .about-info {
   margin-top: 20px;
   padding: 20px;
@@ -179,7 +170,6 @@ nav a:hover, nav a.active {
   font-style: italic;
 }
 
-/* --- Секція заголовка на сторінці About --- */
 .about-header {
   margin-bottom: 50px; 
 }
@@ -200,7 +190,6 @@ nav a:hover, nav a.active {
   margin: 0 auto; 
 }
 
-/* Контейнер для всього слайдера */
 .slider-container {
   display: flex;
   flex-direction: column;
@@ -210,7 +199,6 @@ nav a:hover, nav a.active {
   width: 100%;
 }
 
-/* Обгортка для активного слайда (картинка + текст) */
 .slide {
   display: flex;
   flex-direction: column;
@@ -219,7 +207,6 @@ nav a:hover, nav a.active {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Сама картинка */
 .slide-img {
   width: 100%;
   max-width: 800px; 
@@ -229,7 +216,6 @@ nav a:hover, nav a.active {
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Текст під картинкою */
 .slide-text {
   margin-top: 25px;
   font-size: 1.4rem;
@@ -240,20 +226,17 @@ nav a:hover, nav a.active {
   line-height: 1.5;
 }
 
-/* Контейнер для кнопок */
 .slider-btns {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-/* Анімація плавного перемикання */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Контейнер для кнопок фільтрації */
 .cont {
   display: flex;
   justify-content: center;
@@ -262,10 +245,8 @@ nav a:hover, nav a.active {
   margin: 40px 0;
 }
 
-/* Стиль самих кнопок */
 .change {
   padding: 12px 25px;
-  /* Робимо їх світлими з рамкою, щоб вони не перетягували увагу */
   background-color: #ffffff; 
   color: #2d4a2d; 
   border: 2px solid #2d4a2d;
@@ -283,17 +264,13 @@ nav a:hover, nav a.active {
   box-shadow: 0 4px 12px rgba(45, 74, 45, 0.2);
 }
 
-/* Коли кнопка активна */
 .change.active {
-  /* Тепер вона буде темно-зеленою з білим текстом */
   background-color: #2d4a2d !important; 
   color: #ffffff !important;
   border: 2px solid #2d4a2d;
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(45, 74, 45, 0.2);
 }
-
-/* --- Contact Page Updated Styles --- */
 
 .contact-container {
   max-width: 1000px;
@@ -323,7 +300,6 @@ nav a:hover, nav a.active {
   font-size: 1.1rem;
 }
 
-/* --- Сітка: Інфо зліва (1fr), Форма справа (1.5fr) --- */
 .contact-content {
   display: flex; 
   justify-content: center; 
@@ -333,7 +309,6 @@ nav a:hover, nav a.active {
   width: 100%;
 }
 
-/* --- Ліва колонка (Інформація) --- */
 .contact-info-blocks {
   flex: 1; 
   max-width: 300px; 
@@ -358,7 +333,6 @@ nav a:hover, nav a.active {
   font-size: 1rem;
 }
 
-/* --- Оновлена форма --- */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -373,7 +347,6 @@ nav a:hover, nav a.active {
   box-sizing: border-box; 
 }
 
-/* --- Центрування лейблів та інпутів --- */
 .form-group {
   width: 100%; 
   display: flex;
@@ -416,7 +389,6 @@ nav a:hover, nav a.active {
   box-shadow: 0 0 0 3px rgba(45, 74, 45, 0.1);
 }
 
-/* --- Кнопка SEND MESSAGE --- */
 .contact-form .change {
   width: fit-content; 
   padding: 15px 40px;
@@ -436,7 +408,6 @@ nav a:hover, nav a.active {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* --- Адаптивність --- */
 @media (max-width: 850px) {
   .contact-content {
     flex-direction: column; 
@@ -458,7 +429,6 @@ nav a:hover, nav a.active {
   }
 }
 
-/* Компактний Footer */
 .footer {
   background-color: #2d4a2d;
   color: #ffffff;
@@ -499,7 +469,6 @@ nav a:hover, nav a.active {
   line-height: 1.4;
 }
 
-/* Мобільна адаптація */
 @media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
@@ -511,22 +480,19 @@ nav a:hover, nav a.active {
   }
 }
 
-/* Nav Cart */
-
 .nav-links {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-cart-link {
-    text-decoration: none;
+  text-decoration: none;
   position: relative;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
   transition: transform 0.2s;
   filter: drop-shadow(0 0 8px rgba(255, 204, 0, 0.4));
-  /* filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)); */
 }
 
 .nav-cart-link:hover {
@@ -534,116 +500,100 @@ nav a:hover, nav a.active {
 }
 
 .cart-icon {
-    /* Робимо іконку білою, якщо це PNG/SVG */
-    filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1); 
 }
 
 .cart-badge {
-    position: absolute;
-    top: -10px;
-    right: -12px;
-    background-color: #ffcc00; /* Яскраво-жовтий або золотий замість червоного */
-    color: #2d4a2d; /* Темний текст на жовтому фоні для контрасту */
-    font-size: 0.8rem;
-    font-weight: 800;
-    border-radius: 50%;
-    padding: 2px 6px;
-    min-width: 16px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
-    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  background-color: #ffcc00; 
+  color: #2d4a2d; 
+  font-size: 0.8rem;
+  font-weight: 800;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
 }
 
-/* .cart-badge {
-    position: absolute;
-    top: -10px;
-    right: -12px;
-    background-color: #e74c3c;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 2px 6px;
-    min-width: 16px;
-    text-align: center;
-} */
-
 .quantity-selector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
 .quantity-selector button {
-    background: none;
-    border: 1px solid #2d4a2d;
-    color: #2d4a2d;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border-radius: 4px;
+  background: none;
+  border: 1px solid #2d4a2d;
+  color: #2d4a2d;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .quantity-selector span {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2d4a2d;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2d4a2d;
 }
 
 .cart-container {
-    padding: 40px;
-    max-width: 900px;
-    margin: 0 auto;
-    min-height: 60vh;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 60vh;
 }
 
 .cart-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .cart-item-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
 }
 
 .cart-item-card img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .delete-btn {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .cart-total {
-    margin-top: 40px;
-    text-align: right;
-    border-top: 2px solid #2d4a2d;
-    padding-top: 20px;
+  margin-top: 40px;
+  text-align: right;
+  border-top: 2px solid #2d4a2d;
+  padding-top: 20px;
 }
 
 .cart-empty {
-    text-align: center;
-    padding: 100px;
-    color: #2d4a2d;
+  text-align: center;
+  padding: 100px;
+  color: #2d4a2d;
 }
 
 textarea {
-    resize: none; /* Забороняє ручне змінення розміру вікна повідомлення */
+  resize: none;
 }

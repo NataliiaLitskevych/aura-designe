@@ -1,4 +1,3 @@
-// dataSlides.js
 export const dataSlides = [
   {
     id: 1,

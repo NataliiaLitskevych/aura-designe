@@ -1,4 +1,3 @@
-// Slides.jsx
 import { useState } from 'react';
 import { dataSlides } from '../Data/dataSlides';
 
