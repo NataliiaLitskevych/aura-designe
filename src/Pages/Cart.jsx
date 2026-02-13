@@ -1,10 +1,18 @@
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getCartItems, getTotalPrice, removeItemFromCart } from '../Redux/cartSlice';
+import { getCartItems, getTotalPrice, removeItemFromCart, incrementQuantity, decrementQuantity, clearCart } from '../Redux/cartSlice';
 
 function Cart() {
     const cartItems = useSelector(getCartItems);
     const totalPrice = useSelector(getTotalPrice);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleCheckout = () => {
+        alert("Thank you for your purchase! Your order is being processed. 📦");
+        dispatch(clearCart());
+        navigate("/");
+    };
 
     if (cartItems.length === 0) {
         return (
@@ -24,7 +32,11 @@ function Cart() {
                         <img src={item.image} alt={item.name} />
                         <div className="cart-item-info">
                             <h3>{item.name}</h3>
-                            <p>Quantity: {item.quantity}</p>
+                            <div className="quantity-selector">
+                                <button onClick={() => dispatch(decrementQuantity({ itemId: item.id }))}>-</button>
+                                <span>{item.quantity}</span>
+                                <button onClick={() => dispatch(incrementQuantity({ itemId: item.id }))}>+</button>
+                            </div>
                             <p>Price per unit: ${item.price}</p>
                             <p><strong>Subtotal: ${item.price * item.quantity}</strong></p>
                             
@@ -37,9 +49,14 @@ function Cart() {
                     </div>
                 ))}
             </div>
+            
             <div className="cart-total">
                 <h2>Total Amount: ${totalPrice}</h2>
-                <button className="change">Proceed to Checkout</button>
+                <button 
+                    className="change active" 
+                    onClick={handleCheckout} >
+                    Proceed to Checkout
+                </button>
             </div>
         </div>
     )
