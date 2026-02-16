@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Buttons from "../Components/Buttons";
 import Furniture from "../Components/Furniture";
 import { data } from "../Data/data";
+import '../CSS/Shop.css'
 import "../Loader.css"; 
 
 function Shop() {

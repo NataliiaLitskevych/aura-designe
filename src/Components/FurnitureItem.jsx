@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../Redux/cartSlice';
+import '../CSS/Shop.css'
 
 function FurnitureItem({ item }) {
     const [quantity, setQuantity] = useState(1);

@@ -1,3 +1,4 @@
+import '../CSS/Cart.css'
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getCartItems, getTotalPrice, removeItemFromCart, incrementQuantity, decrementQuantity, clearCart } from '../Redux/cartSlice';
@@ -49,7 +50,7 @@ function Cart() {
                     </div>
                 ))}
             </div>
-            
+
             <div className="cart-total">
                 <h2>Total Amount: ${totalPrice}</h2>
                 <button 

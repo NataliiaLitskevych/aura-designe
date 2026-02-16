@@ -1,4 +1,5 @@
 import Slides from '../Components/Slides';
+import '../CSS/About.css'
 
 function About() {
     return (
