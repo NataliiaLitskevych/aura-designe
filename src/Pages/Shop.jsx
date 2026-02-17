@@ -8,7 +8,6 @@ import "../Loader.css";
 function Shop() {
     const [items, setItems] = useState(data);
     const [currentSearch, setCurrentSearch] = useState('all');
-    
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -18,15 +17,14 @@ function Shop() {
         return () => clearTimeout(timer);
     }, []);
 
-    const chosenCategory = (category) => {
-        const newItems = data.filter(element => element.searchTerm === category);
-        setItems(newItems);
+    const handleCategoryChange = (category) => {
+        if (category === 'all') {
+            setItems(data);
+        } else {
+            const newItems = data.filter(element => element.searchTerm === category);
+            setItems(newItems);
+        }
         setCurrentSearch(category);
-    }
-
-    const showAll = () => {
-        setItems(data);
-        setCurrentSearch('all');
     }
 
     return (
@@ -37,9 +35,7 @@ function Shop() {
             </div>
             
             <Buttons 
-                chosenCategory={chosenCategory} 
-                setItems={showAll} 
-                allData={data} 
+                chosenCategory={handleCategoryChange} 
                 currentSearch={currentSearch} 
             />
 

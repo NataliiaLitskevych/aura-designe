@@ -1,37 +1,25 @@
-function Buttons({ chosenCategory, setItems, allData, currentSearch }) {
-    
-    return (
-        <div className="cont">
-            <button 
-                className={`change ${currentSearch === 'all' ? 'active' : ''}`} 
-                onClick={() => { setItems(allData);}}>
-                All
-            </button>
-            
-            <button 
-                className={`change ${currentSearch === 'chair' ? 'active' : ''}`} 
-                onClick={() => chosenCategory("chair")}>
-                Chairs
-            </button>
-            
-            <button 
-                className={`change ${currentSearch === 'table' ? 'active' : ''}`} 
-                onClick={() => chosenCategory("table")}>
-                Tables
-            </button>
-            
-            <button 
-                className={`change ${currentSearch === 'lighting' ? 'active' : ''}`} 
-                onClick={() => chosenCategory("lighting")}>
-                Lighting
-            </button>
-            
-            <button 
-                className={`change ${currentSearch === 'closet' ? 'active' : ''}`} 
-                onClick={() => chosenCategory("closet")}>
-                Closet
-            </button>
-        </div>
-    )
+function Buttons({ chosenCategory, currentSearch }) {
+  
+  const categories = [
+    { name: 'All', value: 'all' },
+    { name: 'Chairs', value: 'chair' },
+    { name: 'Tables', value: 'table' },
+    { name: 'Lighting', value: 'lighting' },
+    { name: 'Closet', value: 'closet' }
+  ];
+
+  return (
+    <div className="cont">
+      {categories.map((category) => (
+        <button
+          key={category.value}
+          className={`change ${currentSearch === category.value ? 'active' : ''}`}
+          onClick={() => { chosenCategory(category.value) }}>
+          {category.name}
+        </button>
+      ))}
+    </div>
+  );
 }
+
 export default Buttons;
