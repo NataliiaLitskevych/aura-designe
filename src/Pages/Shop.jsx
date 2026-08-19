@@ -30,7 +30,7 @@ function Shop() {
     return (
         <div className="shop-wrapper">
             <div className="logo">
-                <h1>AURA DESIGNE</h1>
+                <h1>AURA DESIGN</h1>
                 <h3>Free Standard Shipping</h3>
             </div>
             
